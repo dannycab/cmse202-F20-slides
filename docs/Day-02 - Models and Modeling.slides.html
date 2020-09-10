@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 
-<title>Day-01 - introduction to CMSE 202 slides</title>
+<title>Day-02 - Models and Modeling slides</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13216,7 +13216,7 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Welcome-to-CMSE-202!">Welcome to CMSE 202!<a class="anchor-link" href="#Welcome-to-CMSE-202!">&#182;</a></h1><h2 id="Section-003">Section 003<a class="anchor-link" href="#Section-003">&#182;</a></h2><h3 id="Sept.-3,-2020">Sept. 3, 2020<a class="anchor-link" href="#Sept.-3,-2020">&#182;</a></h3><p><img src="./images/cmse.png"
+<h1 id="Day-02---Models-and-Modeling">Day 02 - Models and Modeling<a class="anchor-link" href="#Day-02---Models-and-Modeling">&#182;</a></h1><h2 id="Sept.-10,-2020">Sept. 10, 2020<a class="anchor-link" href="#Sept.-10,-2020">&#182;</a></h2><p><img src="./images/cmse.png"
      alt="CMSE logo"
      style="float: right; margin-left: 50px; width: 600px;" /></p>
 
@@ -13226,78 +13226,31 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Instructors">Instructors<a class="anchor-link" href="#Instructors">&#182;</a></h1><h2 id="Prof-Danny.-Caballero">Prof Danny. Caballero<a class="anchor-link" href="#Prof-Danny.-Caballero">&#182;</a></h2><p><img src="./images/dc.jpeg"
-     alt="Danny"
-     style="float: left; margin-right: 50px; width: 400px;" /></p>
-<ul>
-<li>Pronouns: he/him/his</li>
-<li>Email: <a href="mailto:caball14@msu.edu">caball14@msu.edu</a><ul>
-<li>Office hours: TBD</li>
-<li>Slack: <a href="http://cmse-courses.slack.com">cmse-courses.slack.com</a> #cmse202-f20-003 (preferred); @Danny Caballero</li>
+<h1 id="Administrative">Administrative<a class="anchor-link" href="#Administrative">&#182;</a></h1><ul>
+<li><strong>Office Hours</strong>: We are setting these up now based on your needs. They will be posted soon.<ul>
+<li>Danny's office hours: 3-4pm Tuesday and Thursday (and by appointment)</li>
 </ul>
 </li>
-<li>Course Webpage: <a href="http://egr.msu.edu/classes/cmse202/">egr.msu.edu/classes/cmse202/</a></li>
-<li>Course Communication/Feedback/Turn-in: <a href="http://d2l.msu.edu">d2l.msu.edu</a></li>
+<li><strong>Notebooks</strong>: We will be posting the week's worth of work for you on the course website and D2L.</li>
+<li><strong>Slides</strong>: Posted <a href="http://dannycaballero.info/cmse202-F20-slides/">online</a>; you can get access from D2L.</li>
+<li><strong>EGR Accounts</strong>: These are only needed to access (<a href="https://jupyterhub.egr.msu.edu">https://jupyterhub.egr.msu.edu</a>) in case your Python install fails. Email <a href="mailto:support@egr.msu.edu">support@egr.msu.edu</a> if you are still having trouble.</li>
+<li><strong>Groups</strong>: The assigned groups were posted to D2L and emailed to you. Please add your group number to your name so we can assign the groups today.</li>
+<li><strong>Homework 1</strong>: Will be assigned next week; due the week of Sept. 28th.</li>
 </ul>
-
+<h2 id="Any-questions?">Any questions?<a class="anchor-link" href="#Any-questions?">&#182;</a></h2>
 </div>
 </div>
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Teaching-and-Learning-Assistants">Teaching and Learning Assistants<a class="anchor-link" href="#Teaching-and-Learning-Assistants">&#182;</a></h2><h3 id="TA---David-Rimel-(rimeldav@msu.edu)">TA - David Rimel (rimeldav@msu.edu)<a class="anchor-link" href="#TA---David-Rimel-(rimeldav@msu.edu)">&#182;</a></h3><p><img src="./images/david.jpeg"
-     alt="David"
-     style="float: left; margin-right: 50px; width: 250px;" /></p>
-<h3 id="LA---Jack-Hass-(haasjack@msu.edu)">LA - Jack Hass (haasjack@msu.edu)<a class="anchor-link" href="#LA---Jack-Hass-(haasjack@msu.edu)">&#182;</a></h3><p><img src="./images/jack.jpeg"
-     alt="Jack"
-     style="float: left; margin-right: 50px; width: 250px;" /></p>
-<h3 id="LA---Amanda-Bowerman-(bowerm37@msu.edu)">LA - Amanda Bowerman (bowerm37@msu.edu)<a class="anchor-link" href="#LA---Amanda-Bowerman-(bowerm37@msu.edu)">&#182;</a></h3><p><img src="./images/person.png"
-     alt="Person"
-     style="float: left; margin-right: 50px; width: 250px;" /></p>
-<ul>
-<li>Office Hours: TBD</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="CMSE-202-Learning-Goals">CMSE 202 Learning Goals<a class="anchor-link" href="#CMSE-202-Learning-Goals">&#182;</a></h1><h2 id="What-you-will-be-able-to-do-after-this-class:">What you will be able to do after this class:<a class="anchor-link" href="#What-you-will-be-able-to-do-after-this-class:">&#182;</a></h2><ol>
-<li>Design and write programs to solve common problems in a variety of scientific disciplines.</li>
-<li>Identify and analyze appropriate pre-existing techniques, software packages and computing libraries to use in programs to solve scientific problems.</li>
-<li>Choose appropriate algorithms and data types to break down scientific problems into manageable components.</li>
-<li>Use modern software development methods and tools to construct reusable programs.</li>
-<li>Create computer automated workflows to manipulate, analyze and visualize datasets and use this data to evaluate scientific models.</li>
-<li>Demonstrate the ability to work in diverse groups to develop scientific software.</li>
-<li>Explain the results from a scientific computing problem and present it both verbally and in writing.</li>
-</ol>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="CMSE-202-Class-Meetings">CMSE 202 Class Meetings<a class="anchor-link" href="#CMSE-202-Class-Meetings">&#182;</a></h1><h2 id="How-will-class-run?">How will class run?<a class="anchor-link" href="#How-will-class-run?">&#182;</a></h2><ul>
-<li>Class will be virtual, but synchronous<ul>
-<li>We will meet via Zoom 10:20am-12:10pm ET</li>
-<li>Link: <a href="http://msu.zoom.us/j/95628835835">msu.zoom.us/j/95628835835</a> and Password: cmse202-3</li>
+<h1 id="Groups">Groups<a class="anchor-link" href="#Groups">&#182;</a></h1><ul>
+<li>On D2l and in your email, you will find your group assignment (Number 1 through 8).</li>
+<li>Change your name on Zoom to include your group number <ul>
+<li>(e.g., "Danny" becomes "1 - Danny" if I were assigned to group 1).</li>
 </ul>
 </li>
-<li>Complete Pre-Class assignments by 11:59pm ET the night before each class<ul>
-<li>Submit on D2L</li>
-<li>Danny will go over questions and comments from pre-class</li>
-</ul>
-</li>
-<li>We will move into breakout rooms to work on the In-Class Assignment<ul>
-<li>Danny, David, Amanda, and Jack will move around checking in with groups</li>
-<li>We must “checkout” your work for the day to receive credit</li>
-<li>Each person submits on D2L</li>
-</ul>
-</li>
+<li>We will work in these groups for several weeks.</li>
 </ul>
 
 </div>
@@ -13306,33 +13259,15 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Zoom-Sessions">Zoom Sessions<a class="anchor-link" href="#Zoom-Sessions">&#182;</a></h1><h2 id="Large-Class-Meetings">Large Class Meetings<a class="anchor-link" href="#Large-Class-Meetings">&#182;</a></h2><ul>
-<li>Please mute while others are speaking. </li>
-<li>Camera on/off? Whatever you are comfortable with.</li>
-<li>Use raise hands or chat for questions/comments/etc.</li>
+<h1 id="From-Pre-Class-Assignment">From Pre-Class Assignment<a class="anchor-link" href="#From-Pre-Class-Assignment">&#182;</a></h1><h2 id="Things-you-said-you-want-more-practice-with:">Things you said you want more practice with:<a class="anchor-link" href="#Things-you-said-you-want-more-practice-with:">&#182;</a></h2><ul>
+<li>Control structures like loops</li>
+<li>Using <code>pandas</code> to work with and analyze data</li>
+<li>Making models of data (i.e., regression)</li>
+<li>Connecting the progams I write to the models we use</li>
 </ul>
-<h2 id="Small-Group-Meetings">Small Group Meetings<a class="anchor-link" href="#Small-Group-Meetings">&#182;</a></h2><ul>
-<li>Your group can decide norms.</li>
-<li>Instructors will join from time to time.</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Your-concerns">Your concerns<a class="anchor-link" href="#Your-concerns">&#182;</a></h1><ul>
-<li>Wifi connection might not be stable enough for Zoom (recording whole class meetings)</li>
-<li>Access to Google tools abroad (new.vpn.msu.edu)</li>
-<li>Meeting time for students abroad (we are discussing this tomorrow)</li>
-</ul>
-<ul>
-<li>Falling behind</li>
-<li>Getting the help that I need</li>
-<li>Working collaboratively over Zoom</li>
-<li>Taking this course online</li>
-<li>Stress and anxiety about this semester</li>
+<h2 id="Concerns-you-have:">Concerns you have:<a class="anchor-link" href="#Concerns-you-have:">&#182;</a></h2><ul>
+<li>I don't remember syntax for different libraries</li>
+<li>I need to look at websites and notes to complete tasks</li>
 </ul>
 
 </div>
@@ -13341,134 +13276,72 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Potential-Interruptions">Potential Interruptions<a class="anchor-link" href="#Potential-Interruptions">&#182;</a></h1><p><img src="./images/kids.jpeg"
-     alt="Interrupting Kids will Interrupt"
-     style="float: left; width: 800px;" /></p>
+<h1 id="What-is-a-scientific-model?">What is a scientific model?<a class="anchor-link" href="#What-is-a-scientific-model?">&#182;</a></h1><p>In the pre-class assignment, you found videos the describe a model. We can think of models in a variety of ways.</p>
+<p>One of my PhD students, John Aiken, made a short film some years ago about models when he was supposed to be writing his master's thesis. Let's watch it.</p>
 
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Class-Activities-and-Grading">Class Activities and Grading<a class="anchor-link" href="#Class-Activities-and-Grading">&#182;</a></h1><ul>
-<li>Pre-Class (10%)</li>
-<li>In-Class (10%)</li>
-<li>Midterm and Final (15% each; 30% total)</li>
-<li>Homeworks (5 total; 6% each; 30% total)</li>
-<li>Group Project (20%)</li>
-</ul>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s2">&quot;dkTncoPqo5Y&quot;</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[3]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+        <iframe
+            width="800"
+            height="600"
+            src="https://www.youtube.com/embed/dkTncoPqo5Y"
+            frameborder="0"
+            allowfullscreen
+        ></iframe>
+
+</div>
+
+</div>
 
 </div>
 </div>
+
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Awarded-Grades">Awarded Grades<a class="anchor-link" href="#Awarded-Grades">&#182;</a></h1><ul>
-<li>≥ 90% - 4.0</li>
-<li>≥ 85% - 3.5</li>
-<li>≥ 80% - 3.0</li>
-<li>≥ 75% - 2.5</li>
-<li>≥ 70% - 2.0</li>
-<li>≥ 65% - 1.5</li>
-<li>≥ 60% - 1.0</li>
-<li>&lt; 60% - 0.0</li>
-</ul>
-<p>Grades are not curved.</p>
-
+<h1 id="Any-questions,-concerns,-comments?">Any questions, concerns, comments?<a class="anchor-link" href="#Any-questions,-concerns,-comments?">&#182;</a></h1>
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Illnesses">Illnesses<a class="anchor-link" href="#Illnesses">&#182;</a></h1><ul>
-<li><em>Continuity of instruction:</em> Should any instructor in section 003 become ill with COVID-19, another instructor(s) will cover the relevant teaching responsibilities for that instructor.</li>
-<li><em>Student illness:</em> While not required (due to federal health privacy laws), instructors would appreciate knowing if you are ill to adjust expectations as needed.<ul>
-<li><em>Long-term illness (e.g. COVID):</em> Again, while not required to disclose this illness, it is recommended students contact instructors. Students may also contact the Dean of Students Office regarding Medical Leave (if needed).</li>
-</ul>
-</li>
-</ul>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span>
+</pre></div>
 
+    </div>
 </div>
 </div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Commitment-to-an-Inclusive-Classroom">Commitment to an Inclusive Classroom<a class="anchor-link" href="#Commitment-to-an-Inclusive-Classroom">&#182;</a></h1><p>I am committed to creating an inclusive classroom. If I can do anything to make the classroom a better learning environment for you, please let me know.</p>
-<p>If you observe or experience behaviors that violate our committment to inclusivity, please let me know as soon as possible.</p>
-<p>If I violate this principle, please let me know or please tell the undergraduate director, Devin Silvia (dsilvia@msu.edu).</p>
 
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Confidentiality-and-Mandatory-Reporting">Confidentiality and Mandatory Reporting<a class="anchor-link" href="#Confidentiality-and-Mandatory-Reporting">&#182;</a></h1><p>One of our responsibilities is to help create a safe learning environment. It is our goal that you feel able to share information related to your life experiences. We will seek to keep information you share private.</p>
-<p>However, we are required to share information regarding sexual misconduct, relationship violence, or information about criminal activity with the University.</p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Confidentiality-and-Mandatory-Reporting">Confidentiality and Mandatory Reporting<a class="anchor-link" href="#Confidentiality-and-Mandatory-Reporting">&#182;</a></h1><p>Students may speak to someone confidentially by contacting:</p>
-<ul>
-<li>MSU Counseling and Psychiatric Service (CAPS)<ul>
-<li><a href="http://caps.msu.edu">caps.msu.edu</a> or ph: 517-355-8270</li>
-</ul>
-</li>
-<li>MSU’s 24-hour Sexual Assault Crisis Line<ul>
-<li><a href="http://endrape.msu.edu">endrape.msu.edu</a> or ph: 517-372-6666</li>
-</ul>
-</li>
-<li>Olin Health Center<ul>
-<li><a href="http://olin.msu.edu">olin.msu.edu</a> or ph: 517-884-6546</li>
-</ul>
-</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Spartan-Code-of-Honor-Academic-Pledge">Spartan Code of Honor Academic Pledge<a class="anchor-link" href="#Spartan-Code-of-Honor-Academic-Pledge">&#182;</a></h1><p>As a Spartan, I will strive to uphold values of the highest ethical standard. I will practice honesty in my work, foster honesty in my peers, and take pride in knowing that honor is worth more than grades. I will carry these values beyond my time as a student at Michigan State University, continuing the endeavor to build personal integrity in all that I do.</p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="First-&#8220;week&#8221;">First &#8220;week&#8221;<a class="anchor-link" href="#First-&#8220;week&#8221;">&#182;</a></h1><ul>
-<li>Today: Download the first In-Class Activity from website<ul>
-<li>We will break you into randomized groups today</li>
-<li>Make sure to complete CATME survey!</li>
-<li>Remember to turn in on D2L!</li>
-</ul>
-</li>
-<li>Next week: No class on Tuesday (Labor Day holiday)<ul>
-<li>Wednesday: Complete Pre-Class Assignment by 11:59pm (download from web, turn in on D2L)</li>
-<li>Thursday: Work on In-Class Assignment in CATME groups (DC will assign group number)</li>
-</ul>
-</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Questions?">Questions?<a class="anchor-link" href="#Questions?">&#182;</a></h1>
-</div>
-</div>
 </div></section></section>
 </div>
 </div>

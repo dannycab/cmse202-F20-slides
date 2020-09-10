@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 '''
 Written by Danny Caballero
 5 Sept 2020
