@@ -9,11 +9,10 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 
-<title>Day-02 - Models and Modeling slides</title>
+<title>Day-03 - Working with Pandas slides</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-<link rel="stylesheet" href="rise.css">
 
 <!-- General and theme style sheets -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/reveal.css">
@@ -13217,7 +13216,7 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Day-02---Models-and-Modeling">Day 02 - Models and Modeling<a class="anchor-link" href="#Day-02---Models-and-Modeling">&#182;</a></h1><h2 id="Sept.-10,-2020">Sept. 10, 2020<a class="anchor-link" href="#Sept.-10,-2020">&#182;</a></h2><p><img src="./images/cmse.png"
+<h1 id="Day-03---Working-with-Pandas">Day 03 - Working with <code>Pandas</code><a class="anchor-link" href="#Day-03---Working-with-Pandas">&#182;</a></h1><h2 id="Sept.-15,-2020">Sept. 15, 2020<a class="anchor-link" href="#Sept.-15,-2020">&#182;</a></h2><p><img src="./images/cmse.png"
      alt="CMSE logo"
      style="float: right; margin-left: 50px; width: 600px;" /></p>
 
@@ -13228,15 +13227,26 @@ a.anchor-link {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Administrative">Administrative<a class="anchor-link" href="#Administrative">&#182;</a></h1><ul>
-<li><strong>Office Hours</strong>: We are setting these up now based on your needs. They will be posted soon.<ul>
-<li>Danny's office hours: 3-4pm Tuesday and Thursday (and by appointment)</li>
+<li><strong>Office Hours</strong>: Posted on website and D2L<ul>
+<li>Zoom link: <a href="https://msu.zoom.us/j/97957751894">https://msu.zoom.us/j/97957751894</a> password: help4me</li>
 </ul>
 </li>
-<li><strong>Notebooks</strong>: We will be posting the week's worth of work for you on the course website and D2L.</li>
-<li><strong>Slides</strong>: Posted <a href="http://dannycaballero.info/cmse202-F20-slides/">online</a>; you can get access from D2L.</li>
-<li><strong>EGR Accounts</strong>: These are only needed to access (<a href="https://jupyterhub.egr.msu.edu">https://jupyterhub.egr.msu.edu</a>) in case your Python install fails. Email <a href="mailto:support@egr.msu.edu">support@egr.msu.edu</a> if you are still having trouble.</li>
-<li><strong>Groups</strong>: The assigned groups were posted to D2L and emailed to you. Please add your group number to your name so we can assign the groups today.</li>
-<li><strong>Homework 1</strong>: Will be assigned next week; due the week of Sept. 28th.</li>
+<li><strong>Groups</strong>: Reminder set your name to indicate your group number<ul>
+<li>We will stay out of your breakout rooms for about 10 minutes</li>
+<li>This is to give you time to get started and read the assignment together</li>
+<li>Request help if you need it during that time</li>
+</ul>
+</li>
+<li><strong>Homework 1</strong>: Now on EGR website and on D2L<ul>
+<li>Due by midnight Sept 25th; graded in about a week</li>
+</ul>
+</li>
+<li><strong>Class Discussion</strong>: We decided to change our approach to class discussion starting this week. <ul>
+<li>We will ask a random group to report on their work and results at the end of class. </li>
+<li>We will tell you if your group is selected at the beginning of class. </li>
+<li>We will close the breakout rooms at 11:55am for this and to answer additional questions.</li>
+</ul>
+</li>
 </ul>
 <h2 id="Any-questions?">Any questions?<a class="anchor-link" href="#Any-questions?">&#182;</a></h2>
 </div>
@@ -13245,51 +13255,31 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Groups">Groups<a class="anchor-link" href="#Groups">&#182;</a></h1><ul>
-<li>On D2l and in your email, you will find your group assignment (Number 1 through 8).</li>
-<li>Change your name on Zoom to include your group number <ul>
-<li>(e.g., "Danny" becomes "1 - Danny" if I were assigned to group 1).</li>
+<h1 id="From-Pre-Class-Assignment">From Pre-Class Assignment<a class="anchor-link" href="#From-Pre-Class-Assignment">&#182;</a></h1><h2 id="Challenging-bits">Challenging bits<a class="anchor-link" href="#Challenging-bits">&#182;</a></h2><ul>
+<li>I am confused on making the 3D array that represents color (Numpy arrays can be N-dimensional)</li>
+<li>I was struggling with the last question on how to print students who earn greater than 3.0 (slicing dataframes with logic)</li>
 </ul>
-</li>
-<li>We will work in these groups for several weeks.</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="From-Pre-Class-Assignment">From Pre-Class Assignment<a class="anchor-link" href="#From-Pre-Class-Assignment">&#182;</a></h1><h2 id="Things-you-said-you-want-more-practice-with:">Things you said you want more practice with:<a class="anchor-link" href="#Things-you-said-you-want-more-practice-with:">&#182;</a></h2><ul>
-<li>Control structures like loops</li>
-<li>Using <code>pandas</code> to work with and analyze data</li>
-<li>Making models of data (i.e., regression)</li>
-<li>Connecting the progams I write to the models we use</li>
-</ul>
-<h2 id="Concerns-you-have:">Concerns you have:<a class="anchor-link" href="#Concerns-you-have:">&#182;</a></h2><ul>
-<li>I don't remember syntax for different libraries</li>
-<li>I need to look at websites and notes to complete tasks</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="What-is-a-scientific-model?">What is a scientific model?<a class="anchor-link" href="#What-is-a-scientific-model?">&#182;</a></h1><p>In the pre-class assignment, you found videos the describe a model. We can think of models in a variety of ways.</p>
-<p>One of my PhD students, John Aiken, made a short film some years ago about models when he was supposed to be writing his master's thesis. Let's watch it.</p>
+<p><strong>You will get more practice with the second skill today</strong></p>
 
 </div>
 </div>
 </div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
-<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s2">&quot;dkTncoPqo5Y&quot;</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># 1D Array of length 10</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">1D Array of length 10&#39;</span><span class="p">)</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Size: &quot;</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+<span class="c1"># 2D Array that is 3 by 3</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">2D Array that is 3 by 3&#39;</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Size: &quot;</span><span class="p">,</span> <span class="n">b</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13302,20 +13292,307 @@ a.anchor-link {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[1]:</div>
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+1D Array of length 10
+[0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+Size:  (10,)
+
+2D Array that is 3 by 3
+[[0. 0. 0.]
+ [0. 0. 0.]
+ [0. 0. 0.]]
+Size:  (3, 3)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 3D Array that is 5 by 5 by 3</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">3D Array that is 5 by 5 by 3&#39;</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Size: &quot;</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+3D Array that is 5 by 5 by 3
+[[[0. 0. 0.]
+  [0. 0. 0.]
+  [0. 0. 0.]
+  [0. 0. 0.]
+  [0. 0. 0.]]
+
+ [[0. 0. 0.]
+  [0. 0. 0.]
+  [0. 0. 0.]
+  [0. 0. 0.]
+  [0. 0. 0.]]
+
+ [[0. 0. 0.]
+  [0. 0. 0.]
+  [0. 0. 0.]
+  [0. 0. 0.]
+  [0. 0. 0.]]
+
+ [[0. 0. 0.]
+  [0. 0. 0.]
+  [0. 0. 0.]
+  [0. 0. 0.]
+  [0. 0. 0.]]]
+Size:  (4, 5, 3)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1"># Create a dictionary of student records</span>
+<span class="n">student_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:[</span><span class="s2">&quot;mac&quot;</span><span class="p">,</span><span class="s2">&quot;dee&quot;</span><span class="p">,</span><span class="s2">&quot;dennis&quot;</span><span class="p">,</span><span class="s2">&quot;charlie&quot;</span><span class="p">,</span><span class="s2">&quot;frank&quot;</span><span class="p">],</span>
+                 <span class="s2">&quot;pid&quot;</span><span class="p">:[</span><span class="mi">2081</span><span class="p">,</span> <span class="mi">2082</span><span class="p">,</span> <span class="mi">2083</span><span class="p">,</span> <span class="mi">2084</span><span class="p">,</span> <span class="mi">2085</span><span class="p">],</span>
+                 <span class="s2">&quot;total&quot;</span><span class="p">:[</span><span class="mi">60</span><span class="p">,</span><span class="mi">95</span><span class="p">,</span><span class="mi">75</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">85</span><span class="p">],</span>
+                 <span class="s2">&quot;grade&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">3.5</span><span class="p">]}</span>
+
+<span class="c1"># Create a dataframe from the dictionary</span>
+<span class="n">student_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">student_dict</span><span class="p">)</span>
+
+<span class="n">student_df</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[25]:</div>
 
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-        <iframe
-            width="800"
-            height="600"
-            src="https://www.youtube.com/embed/dkTncoPqo5Y"
-            frameborder="0"
-            allowfullscreen
-        ></iframe>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>pid</th>
+      <th>total</th>
+      <th>grade</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>mac</td>
+      <td>2081</td>
+      <td>60</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>dee</td>
+      <td>2082</td>
+      <td>95</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>dennis</td>
+      <td>2083</td>
+      <td>75</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>charlie</td>
+      <td>2084</td>
+      <td>5</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>frank</td>
+      <td>2085</td>
+      <td>85</td>
+      <td>3.5</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Check the logic on grades</span>
+<span class="n">student_df</span><span class="p">[</span><span class="s1">&#39;grade&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mf">3.0</span>
+
+<span class="c1"># This generates binary values that can be used to slice dataframes</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[26]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0    False
+1     True
+2     True
+3    False
+4     True
+Name: grade, dtype: bool</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Slice the dataframe</span>
+
+<span class="n">student_df</span><span class="p">[</span><span class="n">student_df</span><span class="p">[</span><span class="s1">&#39;grade&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mf">3.0</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[27]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>pid</th>
+      <th>total</th>
+      <th>grade</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>dee</td>
+      <td>2082</td>
+      <td>95</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>dennis</td>
+      <td>2083</td>
+      <td>75</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>frank</td>
+      <td>2085</td>
+      <td>85</td>
+      <td>3.5</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 </div>
 
 </div>
@@ -13327,19 +13604,7 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Any-questions,-concerns,-comments?">Any questions, concerns, comments?<a class="anchor-link" href="#Any-questions,-concerns,-comments?">&#182;</a></h1>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Icebreaker-for-your-groups">Icebreaker for your groups<a class="anchor-link" href="#Icebreaker-for-your-groups">&#182;</a></h1><h2 id="Introduce-yourself">Introduce yourself<a class="anchor-link" href="#Introduce-yourself">&#182;</a></h2><ul>
-<li>Name</li>
-<li>Major</li>
-<li>What have you been doing for fun or to relax during the pandemic?</li>
-</ul>
-
+<h1 id="Questions,-Comments,-Concerns?">Questions, Comments, Concerns?<a class="anchor-link" href="#Questions,-Comments,-Concerns?">&#182;</a></h1>
 </div>
 </div>
 </div></section></section>
