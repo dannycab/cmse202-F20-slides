@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 
-<title>Day-02 - Models and Modeling slides</title>
+<title>Day-04 - Working with datetime slides</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13216,7 +13216,7 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Day-02---Models-and-Modeling">Day 02 - Models and Modeling<a class="anchor-link" href="#Day-02---Models-and-Modeling">&#182;</a></h1><h2 id="Sept.-10,-2020">Sept. 10, 2020<a class="anchor-link" href="#Sept.-10,-2020">&#182;</a></h2><p><img src="./images/cmse.png"
+<h1 id="Day-04---Working-with-datetime">Day 04 - Working with <code>datetime</code><a class="anchor-link" href="#Day-04---Working-with-datetime">&#182;</a></h1><h2 id="Sept.-17,-2020">Sept. 17, 2020<a class="anchor-link" href="#Sept.-17,-2020">&#182;</a></h2><p><img src="./images/cmse.png"
      alt="CMSE logo"
      style="float: right; margin-left: 50px; width: 600px;" /></p>
 
@@ -13227,15 +13227,23 @@ a.anchor-link {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Administrative">Administrative<a class="anchor-link" href="#Administrative">&#182;</a></h1><ul>
-<li><strong>Office Hours</strong>: We are setting these up now based on your needs. They will be posted soon.<ul>
-<li>Danny's office hours: 3-4pm Tuesday and Thursday (and by appointment)</li>
+<li><strong>Getting help</strong>:<ul>
+<li>Y'all are making good use of office hours and Slack</li>
 </ul>
 </li>
-<li><strong>Notebooks</strong>: We will be posting the week's worth of work for you on the course website and D2L.</li>
-<li><strong>Slides</strong>: Posted <a href="http://dannycaballero.info/cmse202-F20-slides/">online</a>; you can get access from D2L.</li>
-<li><strong>EGR Accounts</strong>: These are only needed to access (<a href="https://jupyterhub.egr.msu.edu">https://jupyterhub.egr.msu.edu</a>) in case your Python install fails. Email <a href="mailto:support@egr.msu.edu">support@egr.msu.edu</a> if you are still having trouble.</li>
-<li><strong>Groups</strong>: The assigned groups were posted to D2L and emailed to you. Please add your group number to your name so we can assign the groups today.</li>
-<li><strong>Homework 1</strong>: Will be assigned next week; due the week of Sept. 28th.</li>
+<li><strong>Individual check-ins</strong>:<ul>
+<li>Danny will be sending eash person an email to check in on how they are doing with online classes and asking for feedback.</li>
+</ul>
+</li>
+<li><strong>Group work</strong>:<ul>
+<li>In some groups, not everyone is moving through the activity at the same pace. </li>
+<li>Make sure to check in with everyone on where they are and share screens to help each other stay together.</li>
+</ul>
+</li>
+<li><strong>Extra breakout rooms</strong>:<ul>
+<li>We are going to open 4 additional breakout rooms for one-on-one meetings as needed.</li>
+</ul>
+</li>
 </ul>
 <h2 id="Any-questions?">Any questions?<a class="anchor-link" href="#Any-questions?">&#182;</a></h2>
 </div>
@@ -13244,40 +13252,13 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Groups">Groups<a class="anchor-link" href="#Groups">&#182;</a></h1><ul>
-<li>On D2l and in your email, you will find your group assignment (Number 1 through 8).</li>
-<li>Change your name on Zoom to include your group number <ul>
-<li>(e.g., "Danny" becomes "1 - Danny" if I were assigned to group 1).</li>
+<h1 id="From-Pre-Class-Assignment">From Pre-Class Assignment<a class="anchor-link" href="#From-Pre-Class-Assignment">&#182;</a></h1><h2 id="Challenging-bits">Challenging bits<a class="anchor-link" href="#Challenging-bits">&#182;</a></h2><ul>
+<li>Reading the sunspots file</li>
+<li>Knowing what to do with the date information (instructions were unclear for some)</li>
+<li>Converting the date information to <code>datetime</code></li>
+<li>Using <code>.assign()</code></li>
 </ul>
-</li>
-<li>We will work in these groups for several weeks.</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="From-Pre-Class-Assignment">From Pre-Class Assignment<a class="anchor-link" href="#From-Pre-Class-Assignment">&#182;</a></h1><h2 id="Things-you-said-you-want-more-practice-with:">Things you said you want more practice with:<a class="anchor-link" href="#Things-you-said-you-want-more-practice-with:">&#182;</a></h2><ul>
-<li>Control structures like loops</li>
-<li>Using <code>pandas</code> to work with and analyze data</li>
-<li>Making models of data (i.e., regression)</li>
-<li>Connecting the progams I write to the models we use</li>
-</ul>
-<h2 id="Concerns-you-have:">Concerns you have:<a class="anchor-link" href="#Concerns-you-have:">&#182;</a></h2><ul>
-<li>I don't remember syntax for different libraries</li>
-<li>I need to look at websites and notes to complete tasks</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="What-is-a-scientific-model?">What is a scientific model?<a class="anchor-link" href="#What-is-a-scientific-model?">&#182;</a></h1><p>In the pre-class assignment, you found videos the describe a model. We can think of models in a variety of ways.</p>
-<p>One of my PhD students, John Aiken, made a short film some years ago about models when he was supposed to be writing his master's thesis. Let's watch it.</p>
+<p><strong>You will get more practice with this today.</strong></p>
 
 </div>
 </div>
@@ -13287,8 +13268,15 @@ a.anchor-link {
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
-<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s2">&quot;dkTncoPqo5Y&quot;</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
+
+<span class="c1"># We can store date information as integers </span>
+<span class="n">birthyear</span> <span class="o">=</span> <span class="mi">1982</span>
+<span class="n">birthmonth</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">birthday</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Danny</span><span class="se">\&#39;</span><span class="s1">s Birthday is:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">birthmonth</span><span class="p">,</span> <span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="n">birthday</span><span class="p">,</span> <span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="n">birthyear</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">birthyear</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -13301,20 +13289,512 @@ a.anchor-link {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[1]:</div>
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Danny&#39;s Birthday is:
+ 5 / 1 / 1982
+&lt;class &#39;int&#39;&gt;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># That is less useful for doing math with dates</span>
+<span class="c1"># For example, how old am i?</span>
+
+<span class="n">today</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">today</span><span class="p">)</span>
+
+<span class="c1"># We can convert information to datetime</span>
+<span class="n">birthdate</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="n">year</span> <span class="o">=</span> <span class="n">birthyear</span><span class="p">,</span> <span class="n">month</span> <span class="o">=</span> <span class="n">birthmonth</span><span class="p">,</span> <span class="n">day</span> <span class="o">=</span> <span class="n">birthday</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">birthdate</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2020-09-17 09:24:40.438286
+1982-05-01 00:00:00
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># datetime objects can have math done on them</span>
+<span class="n">age</span> <span class="o">=</span> <span class="n">today</span> <span class="o">-</span> <span class="n">birthdate</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Age: &#39;</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span>
+
+<span class="c1"># Notice that the types are different</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">today</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">age</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Age:  14019 days, 9:24:40.438286
+&lt;class &#39;datetime.datetime&#39;&gt;
+&lt;class &#39;datetime.timedelta&#39;&gt;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># What about working with data?</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">column_names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;month&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;day&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;date&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;count&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;std&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;obs&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;provisional&quot;</span><span class="p">]</span>
+
+<span class="c1"># Read in the date file and specify columns</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/sunspots.txt&#39;</span><span class="p">,</span> <span class="n">delim_whitespace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">names</span> <span class="o">=</span> <span class="n">column_names</span><span class="p">)</span>
+
+<span class="c1"># Type for each column</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">dtypes</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>year             int64
+month            int64
+day              int64
+date           float64
+count            int64
+std            float64
+obs              int64
+provisional     object
+dtype: object
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Let&#39;s look at the DataFrame</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[5]:</div>
 
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-        <iframe
-            width="800"
-            height="600"
-            src="https://www.youtube.com/embed/dkTncoPqo5Y"
-            frameborder="0"
-            allowfullscreen
-        ></iframe>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>year</th>
+      <th>month</th>
+      <th>day</th>
+      <th>date</th>
+      <th>count</th>
+      <th>std</th>
+      <th>obs</th>
+      <th>provisional</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1981</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1981.001</td>
+      <td>218</td>
+      <td>12.4</td>
+      <td>9</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1981</td>
+      <td>1</td>
+      <td>2</td>
+      <td>1981.004</td>
+      <td>194</td>
+      <td>14.7</td>
+      <td>7</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1981</td>
+      <td>1</td>
+      <td>3</td>
+      <td>1981.007</td>
+      <td>168</td>
+      <td>10.8</td>
+      <td>7</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1981</td>
+      <td>1</td>
+      <td>4</td>
+      <td>1981.010</td>
+      <td>155</td>
+      <td>9.1</td>
+      <td>11</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1981</td>
+      <td>1</td>
+      <td>5</td>
+      <td>1981.012</td>
+      <td>129</td>
+      <td>6.2</td>
+      <td>9</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># We want year, month, and day to be put together into a datetime Series</span>
+<span class="c1"># pandas has a tool for that called .to_datetime()</span>
+
+<span class="c1"># We can first create a DataFrame with just this information</span>
+<span class="n">date_info</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="s2">&quot;month&quot;</span><span class="p">,</span> <span class="s2">&quot;day&quot;</span><span class="p">]]</span>
+<span class="n">date_info</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[6]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>year</th>
+      <th>month</th>
+      <th>day</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1981</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1981</td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1981</td>
+      <td>1</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1981</td>
+      <td>1</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1981</td>
+      <td>1</td>
+      <td>5</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Then convert the date_info DataFrame into a datetime Series using .to_datetime()</span>
+<span class="c1"># Notice the order of the columns in date_info matches the format ordering</span>
+<span class="n">df_date</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">date_info</span><span class="p">,</span> <span class="nb">format</span> <span class="o">=</span> <span class="s1">&#39;%Y %m </span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">df_date</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[7]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0   1981-01-01
+1   1981-01-02
+2   1981-01-03
+3   1981-01-04
+4   1981-01-05
+dtype: datetime64[ns]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Finally we need to assign the new series and drop the old columns</span>
+
+<span class="c1"># assign() will create a new column with the series you pass it</span>
+<span class="c1"># it must be returned to a variable or the assignment is temporary</span>
+<span class="n">df</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">datetime</span> <span class="o">=</span> <span class="n">df_date</span><span class="p">)</span>      <span class="c1"># doesn&#39;t store the result!</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">datetime</span> <span class="o">=</span> <span class="n">df_date</span><span class="p">)</span> <span class="c1"># stores the result!</span>
+
+<span class="c1"># drop() will drop columns from a DataFrame</span>
+<span class="c1"># again, it must be turned to a variable</span>
+<span class="n">dropped_columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="s2">&quot;month&quot;</span><span class="p">,</span> <span class="s2">&quot;day&quot;</span><span class="p">,</span> <span class="s2">&quot;date&quot;</span><span class="p">]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="n">dropped_columns</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[8]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>count</th>
+      <th>std</th>
+      <th>obs</th>
+      <th>provisional</th>
+      <th>datetime</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>218</td>
+      <td>12.4</td>
+      <td>9</td>
+      <td>NaN</td>
+      <td>1981-01-01</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>194</td>
+      <td>14.7</td>
+      <td>7</td>
+      <td>NaN</td>
+      <td>1981-01-02</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>168</td>
+      <td>10.8</td>
+      <td>7</td>
+      <td>NaN</td>
+      <td>1981-01-03</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>155</td>
+      <td>9.1</td>
+      <td>11</td>
+      <td>NaN</td>
+      <td>1981-01-04</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>129</td>
+      <td>6.2</td>
+      <td>9</td>
+      <td>NaN</td>
+      <td>1981-01-05</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 </div>
 
 </div>
@@ -13326,19 +13806,7 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Any-questions,-concerns,-comments?">Any questions, concerns, comments?<a class="anchor-link" href="#Any-questions,-concerns,-comments?">&#182;</a></h1>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Icebreaker-for-your-groups">Icebreaker for your groups<a class="anchor-link" href="#Icebreaker-for-your-groups">&#182;</a></h1><h2 id="Introduce-yourself">Introduce yourself<a class="anchor-link" href="#Introduce-yourself">&#182;</a></h2><ul>
-<li>Name</li>
-<li>Major</li>
-<li>What have you been doing for fun or to relax during the pandemic?</li>
-</ul>
-
+<h1 id="Questions,-Comments,-Concerns?">Questions, Comments, Concerns?<a class="anchor-link" href="#Questions,-Comments,-Concerns?">&#182;</a></h1>
 </div>
 </div>
 </div></section></section>
