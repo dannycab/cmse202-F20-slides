@@ -13341,7 +13341,7 @@ where $\eta$ is the learning rate and $d$ = <code>actual_class_value</code> - <c
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Continuing-example">Continuing example<a class="anchor-link" href="#Continuing-example">&#182;</a></h1><p>We predicted class 1 (<code>class_label</code>=1), but the data is in class 2 (<code>class_label</code>=-1). So the update to the weights is:</p>
-$$update = \eta*d*\vec{x} = \eta*(-1 - (1))*(2,3,1)$$$$update = \eta*(-2)*(2,3,1) = (-4,-6,-2)*\eta$$<p>where we choose $eta$, let's take it to be 0.01. So the update is:</p>
+$$update = \eta*d*\vec{x} = \eta*(-1 - (1))*(2,3,1)$$$$update = \eta*(-2)*(2,3,1) = (-4,-6,-2)*\eta$$<p>where we choose $\eta$, let's take it to be 0.01. So the update is:</p>
 $$update = (-4,-6,-2)*0.01 = (-0.04, -0.06, -0.02)$$<p>We add this to the guessed weights:</p>
 $$ \vec{w}_{new} = \vec{w}_{old} + update = (1,1,1) + (-0.04, -0.06, -0.02) = (0.96,0.94,0.98)$$
 </div>
