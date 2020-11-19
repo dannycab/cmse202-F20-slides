@@ -13313,7 +13313,7 @@ $$ result = \vec{x} \cdot \vec{w} = (x_1, x_2, 1) \cdot (1,1,1) = x_1 + x_2 + 1$
 <li>If $x_1 = 2$ and $x_2 = 3$, then the $result = (2+3+1) = 6$</li>
 </ul>
 <p><strong>Because this is greater than zero, we predict it to be in class 1</strong></p>
-<p><code>if result &gt; 1:
+<p><code>if result &gt; 0:
     predict class 1 and return 1;
  else:
     predict class 2 and return -1</code></p>
